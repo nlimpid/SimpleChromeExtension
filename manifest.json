@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+
+  "name": "Getting started example",
+  "description": "This extension shows a Google Image search result for the current page",
+  "version": "1.0",
+
+  "background": {
+    // "scripts": ["eventPage.js"],
+    "persistent": false,
+    "page": "background.html"
+  },
+
+  "browser_action": {
+    "default_icon": "gmail_not_logged_in.png"
+    // "default_popup": "popup.html",
+    // "default_title": "click here"
+  },
+  "permissions": [
+    "alarms",
+    "tabs",
+    "webNavigation",
+    "*://*.google.com/"
+  ]
+}
