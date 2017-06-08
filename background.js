@@ -1,9 +1,13 @@
-chrome.tabs.query({'active': true}, function(tabs) {
-  chrome.tabs.update(tabs[0].id, {url: newUrl});
-});
-
 function someOtherFunction() {
+    chrome.tabs.query({
+        'active': true,
+        'lastFocusedWindow': true
+    }, function(tabs) {
+        var url = tabs[0].url;
+        alert("tabs " + url);
+    });
     alert("hello");
+    alert("out" + url);
     console.log("hello");
 }
 
